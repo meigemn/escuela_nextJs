@@ -9,6 +9,37 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  /**
+   * provider = "postgresql"
+   */
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Grupo {
+  id      Int    @id @default(autoincrement())
+  nombre  String
+  tutores String
+  aula    String
+
+  @@map("grupos")
+
+}
+
+model Estudiante {
+  id               Int      @id @default(autoincrement())
+  nombre           String
+  fecha_nacimiento DateTime
+  foto             String?
+  tutor_legal      String
+  asignatura       String @default("Ambos padres")
+  @@map("estudiantes")
+}
+
+model Asignatura{
+  id      Int    @id @default(autoincrement())
+  nombre  String
+  profesor String
+  num_horas Int
+  @@map("asignaturas")
 }
