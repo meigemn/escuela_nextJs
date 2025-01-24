@@ -33,7 +33,7 @@ async function Lista() {
                         <tr key={estudiante.id} className="hover:bg-blue-50">
                             <td className="border border-gray-300 px-4 py-2">{estudiante.nombre}</td>
                             <td className="border border-gray-300 px-4 py-2">{new Date(estudiante.fecha_nacimiento).toLocaleDateString()}</td>
-                            <td className="border border-gray-300 px-4 py-2">{estudiante.foto}</td>
+                            <td className="border border-gray-300 px-4 py-2"><img src={estudiante.foto} alt="" /></td>
                             <td className="border border-gray-300 px-4 py-2">{estudiante.tutor_legal}</td>
                         </tr>
                     ))}

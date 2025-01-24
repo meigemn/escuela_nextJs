@@ -43,8 +43,8 @@ async function Producto({ id }) {
                         <td className="border border-gray-300 px-4 py-2">{estudiante.tutor_legal}</td>
                     </tr>
                     <tr className="hover:bg-blue-50">
-                        <td className="border border-gray-300 px-4 py-2">Aula</td>
-                        <td className="border border-gray-300 px-4 py-2">{estudiante.aula}</td>
+                        <td className="border border-gray-300 px-4 py-2">Foto</td>
+                        <td className="border border-gray-300 px-4 py-2"><img  src={estudiante.foto} alt="" width="25px"/></td>
                     </tr>
                 </tbody>
             </table>
